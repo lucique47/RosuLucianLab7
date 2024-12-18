@@ -33,7 +33,6 @@ public partial class ListPage : ContentPage
     {
         base.OnAppearing();
         var shopl = (ShopList)BindingContext;
-
         listView.ItemsSource = await App.Database.GetListProductsAsync(shopl.ID);
     }
 }
